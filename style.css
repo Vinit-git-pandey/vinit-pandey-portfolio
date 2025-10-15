@@ -27,9 +27,10 @@ body {
 }
 
 .container {
-  width: 92%;
-  max-width: 1100px;
+  width: 95%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* ==== Header & Navigation ==== */
@@ -290,5 +291,83 @@ body {
   border-radius: var(--radius);
   padding: 6px 12px;
   transition: 0.3s;
+}
+/* =========================
+   📱 Responsive Design Fixes
+   ========================= */
+@media (max-width: 900px) {
+
+  /* Make hero section vertical */
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-photo img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  /* Adjust padding for all sections */
+  section {
+    padding: 40px 0;
+  }
+
+  /* Center content */
+  .section h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* Stack experience and certification cards */
+  .job,
+  .cert {
+    padding: 18px;
+    text-align: left;
+  }
+
+  /* Skills grid with fewer columns */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 14px;
+  }
+
+  /* Contact section full width */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .link-btn {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  /* Reduce footer text size */
+  .site-footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Smaller phones */
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+  }
 }
 
