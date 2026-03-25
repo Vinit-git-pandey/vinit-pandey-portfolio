@@ -1,373 +1,44 @@
-/* ==== Global Theme Variables ==== */
-:root {
-  --bg-gradient: linear-gradient(180deg, #0a0f1f, #081229, #040a16);
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --card-border: rgba(255, 255, 255, 0.1);
-  --text: #f4f6fb;
-  --muted: #a8b3c7;
-  --accent: #1ee5b8;
-  --accent-hover: #18b090;
-  --shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-  --radius: 14px;
-}
-
-/* ==== Base Styles ==== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Poppins", system-ui, -apple-system, Roboto, sans-serif;
-  background: var(--bg-gradient);
-  color: var(--text);
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
-
-.container {
-  width: 95%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* ==== Header & Navigation ==== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(10, 10, 20, 0.7);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--card-border);
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-}
-
-.logo {
-  color: var(--accent);
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 18px;
-}
-
-.nav-links a {
-  color: var(--muted);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: var(--accent);
-}
-
-/* ==== Hero Section ==== */
-.hero {
-  padding: 80px 0;
-  text-align: center;
-  background: radial-gradient(circle at top left, #12203a, #0a0f1f);
-  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.6);
-}
-
-.hero-photo img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 4px solid var(--accent);
-  box-shadow: 0 0 25px rgba(30, 229, 184, 0.3);
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.hero-photo img:hover {
-  transform: scale(1.05);
-}
-
-.hero h1 {
-  margin-top: 20px;
-  font-size: 2.4rem;
-  letter-spacing: 1px;
-}
-
-.role {
-  color: var(--accent);
-  font-weight: 600;
-  margin-top: 8px;
-}
-
-.hero-desc {
-  color: var(--muted);
-  margin: 14px auto 20px;
-  max-width: 700px;
-}
-
-.hero-cta .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 6px;
-  border-radius: var(--radius);
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.25s;
-}
-
-.btn {
-  background: var(--accent);
-  color: #041414;
-}
-
-.btn:hover {
-  background: var(--accent-hover);
-}
-
-.btn.ghost {
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn.ghost:hover {
-  background: var(--accent);
-  color: #041414;
-}
-
-/* ==== Section Style ==== */
-.section {
-  padding: 60px 0;
-  background: var(--card-bg);
-  border-top: 1px solid var(--card-border);
-}
-
-.section:nth-of-type(even) {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  color: var(--accent);
-}
-
-/* ==== Experience ==== */
-.job {
+/* ==== Experience Upgrade ==== */
+.card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 24px;
+  margin-top: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.job:hover {
-  transform: translateY(-4px);
+.card:hover {
+  transform: translateY(-5px);
   box-shadow: var(--shadow);
 }
 
-.job h3 {
-  margin-bottom: 4px;
-  color: var(--text);
+.card h4 {
+  margin-top: 15px;
+  color: var(--accent);
 }
 
 .period {
   color: var(--muted);
-  font-size: 0.85rem;
-}
-
-.job ul {
-  margin-top: 10px;
-  margin-left: 20px;
-  color: var(--muted);
-}
-
-/* ==== Skills ==== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 20px;
-  margin-top: 25px;
-}
-
-.skill {
-  text-align: center;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 16px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow);
-}
-
-.skill img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+  font-size: 0.9rem;
   margin-bottom: 10px;
 }
-
-.skill span {
-  display: block;
-  font-weight: 600;
-  color: var(--text);
+.hero-tagline {
+  font-size: 18px;
+  margin: 10px 0;
+  color: var(--accent);
+  font-weight: 500;
+}
+.section h2 {
+  position: relative;
 }
 
-/* ==== Certifications ==== */
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 18px;
-  margin-top: 20px;
-}
-
-.cert {
-  display: flex;
-  align-items: center;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 16px;
-  transition: 0.3s;
-}
-
-.cert:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow);
-}
-
-.cert img {
+.section h2::after {
+  content: "";
   width: 60px;
-  height: 60px;
-  margin-right: 14px;
-  object-fit: contain;
+  height: 3px;
+  background: var(--accent);
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
-
-/* ==== Contact ==== */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  margin-top: 25px;
-}
-
-.contact-list {
-  list-style: none;
-  color: var(--muted);
-}
-
-.contact-list a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.contact-list a:hover {
-  text-decoration: underline;
-}
-
-.link-btn {
-  display: inline-block;
-  margin-right: 10px;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-  border: 1px solid var(--accent);
-  border-radius: var(--radius);
-  padding: 6px 12px;
-  transition: 0.3s;
-}
-/* =========================
-   📱 Responsive Design Fixes
-   ========================= */
-@media (max-width: 900px) {
-
-  /* Make hero section vertical */
-  .hero-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-photo img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-  }
-
-  .hero-text {
-    width: 100%;
-  }
-
-  /* Adjust padding for all sections */
-  section {
-    padding: 40px 0;
-  }
-
-  /* Center content */
-  .section h2 {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-
-  /* Stack experience and certification cards */
-  .job,
-  .cert {
-    padding: 18px;
-    text-align: left;
-  }
-
-  /* Skills grid with fewer columns */
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 14px;
-  }
-
-  /* Contact section full width */
-  .contact-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .link-btn {
-    display: inline-block;
-    margin-bottom: 10px;
-  }
-
-  /* Reduce footer text size */
-  .site-footer {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 500px) {
-  /* Smaller phones */
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-
-  .role {
-    font-size: 1rem;
-  }
-
-  .hero-desc {
-    font-size: 0.95rem;
-  }
-}
-
